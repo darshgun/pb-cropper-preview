@@ -1,11 +1,12 @@
 //Replace this with index.tsx for check pas
 import React, { useState, Fragment } from 'react';
+import oneByOne from '../images/1-1.jpg';
+import twoByThree from '../images/2-3.jpg';
+import threeByTwo from '../images/3-2.jpg';
 import './preview.scss';
 
 const PastBook = () => {
-  const [imageUrl, setImageUrl] = useState(
-    'https://cdn.filestackcontent.com/MVeZfaJyRQydUh7BRgVE'
-  );
+  const [imageUrl, setImageUrl] = useState(oneByOne);
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
   const [zoom, setZoom] = useState(1);
@@ -15,6 +16,8 @@ const PastBook = () => {
   const placeholderWidth = 450;
   const placeholderHeight = placeholderWidth / aspect;
   const imageWidth = placeholderWidth;
+
+  const [autoFocus, setAutoFocus] = useState();
 
   const ControlWrapper = ({ label, children }) => (
     <div className="control">
@@ -36,15 +39,9 @@ const PastBook = () => {
       </ControlWrapper>
       <ControlWrapper label="Image source">
         <select value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}>
-          <option value="https://cdn.filestackcontent.com/MVeZfaJyRQydUh7BRgVE">
-            1:1 image
-          </option>
-          <option value="https://cdn.filestackcontent.com/KReUBvVGQ1yFRK3HTI8d">
-            2:3 image
-          </option>
-          <option value="https://cdn.filestackcontent.com/XfKdWQ7TDKdd2ueg7blw">
-            3:2 image
-          </option>
+          <option value={oneByOne}>1:1 image</option>
+          <option value={twoByThree}>2:3 image</option>
+          <option value={threeByTwo}>3:2 image</option>
         </select>
       </ControlWrapper>
       <ControlWrapper label="Position (X%, Y%)">
@@ -52,20 +49,29 @@ const PastBook = () => {
           type="number"
           value={positionX}
           step="10"
-          onChange={(e) => setPositionX(e.target.value)}
+          onChange={(e) => {
+            setAutoFocus(1);
+            setPositionX(e.target.value);
+          }}
           style={{
             width: '48%',
           }}
+          autoFocus={autoFocus === 1}
         />
         <input
           type="number"
           value={positionY}
           step="10"
-          onChange={(e) => setPositionY(e.target.value)}
+          onChange={(e) => {
+            setAutoFocus(2);
+            setPositionY(e.target.value);
+          }}
+          key={2}
           style={{
             width: '48%',
             marginLeft: '4%',
           }}
+          autoFocus={autoFocus === 2}
         />
       </ControlWrapper>
       <ControlWrapper label="Zoom">
@@ -73,7 +79,11 @@ const PastBook = () => {
           type="number"
           value={zoom}
           step=".1"
-          onChange={(e) => setZoom(e.target.value)}
+          onChange={(e) => {
+            setAutoFocus(3);
+            e.target.value > 0 ? setZoom(e.target.value) : setZoom(0.01);
+          }}
+          autoFocus={autoFocus === 3}
         />
       </ControlWrapper>
       <ControlWrapper label="Rotation">
@@ -81,7 +91,13 @@ const PastBook = () => {
           type="number"
           value={rotation}
           step="10"
-          onChange={(e) => setRotation(e.target.value)}
+          onChange={(e) => {
+            setAutoFocus(4);
+            e.target.value < 360 && e.target.value > 0
+              ? setRotation(e.target.value)
+              : setRotation(0);
+          }}
+          autoFocus={autoFocus === 4}
         />
       </ControlWrapper>
     </div>

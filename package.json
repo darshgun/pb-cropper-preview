@@ -1,9 +1,8 @@
 {
-  "name": "pastbook-cropper-previews",
+  "name": "dev-pb-demos",
   "version": "1.0.0",
   "description": "React example starter project",
   "main": "src/index.js",
-  "homepage": "https://darshgun.github.io/pb-cropper-preview/",
   "dependencies": {
     "@babel/runtime": "7.13.8",
     "gh-pages": "3.1.0",
