@@ -9,7 +9,8 @@ ReactDOM.render(
   <StrictMode>
     <div className="wrapper">
       <div className="header">
-        <h1>Image function testing</h1>
+        <h1>Image attribute tester</h1>
+        <span>Cropper v2.0</span>
       </div>
       <Preview />
     </div>

@@ -4,7 +4,7 @@ import './preview.scss';
 
 const PastBook = () => {
   const [imageUrl, setImageUrl] = useState(
-    'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-0/p320x320/111607881_114981553627847_15083785481239512_o.jpg?_nc_cat=108&ccb=2&_nc_sid=e007fa&_nc_ohc=H5XdyfRLtwIAX8LImhw&_nc_ht=scontent-sea1-1.xx&tp=6&oh=4ee2d19b1d07ee6569b223674b333114&oe=604684C3'
+    'https://cdn.filestackcontent.com/MVeZfaJyRQydUh7BRgVE'
   );
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
@@ -12,7 +12,7 @@ const PastBook = () => {
   const [rotation, setRotation] = useState(0);
   const [aspect, setAspect] = useState(1);
 
-  const placeholderWidth = 350;
+  const placeholderWidth = 450;
   const placeholderHeight = placeholderWidth / aspect;
   const imageWidth = placeholderWidth;
 
@@ -34,25 +34,33 @@ const PastBook = () => {
           <option value={3 / 2}>3:2</option>
         </select>
       </ControlWrapper>
-      <ControlWrapper label="Image URL">
-        <input
-          type="text"
-          value={imageUrl}
-          onChange={(e) => setImageUrl(e.target.value)}
-        />
+      <ControlWrapper label="Image source">
+        <select value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}>
+          <option value="https://cdn.filestackcontent.com/MVeZfaJyRQydUh7BRgVE">
+            1:1 image
+          </option>
+          <option value="https://cdn.filestackcontent.com/KReUBvVGQ1yFRK3HTI8d">
+            2:3 image
+          </option>
+          <option value="https://cdn.filestackcontent.com/XfKdWQ7TDKdd2ueg7blw">
+            3:2 image
+          </option>
+        </select>
       </ControlWrapper>
       <ControlWrapper label="Position (X%, Y%)">
         <input
-          type="text"
+          type="number"
           value={positionX}
+          step="10"
           onChange={(e) => setPositionX(e.target.value)}
           style={{
             width: '48%',
           }}
         />
         <input
-          type="text"
+          type="number"
           value={positionY}
+          step="10"
           onChange={(e) => setPositionY(e.target.value)}
           style={{
             width: '48%',
@@ -62,15 +70,17 @@ const PastBook = () => {
       </ControlWrapper>
       <ControlWrapper label="Zoom">
         <input
-          type="text"
+          type="number"
           value={zoom}
+          step=".1"
           onChange={(e) => setZoom(e.target.value)}
         />
       </ControlWrapper>
       <ControlWrapper label="Rotation">
         <input
-          type="text"
+          type="number"
           value={rotation}
+          step="10"
           onChange={(e) => setRotation(e.target.value)}
         />
       </ControlWrapper>
