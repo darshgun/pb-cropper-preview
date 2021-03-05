@@ -1,0 +1,32 @@
+{
+  "name": "pastbook-cropper-previews",
+  "version": "1.0.0",
+  "description": "React example starter project",
+  "main": "src/index.js",
+  "homepage": "https://darshgun.github.io/pb-cropper-preview/",
+  "dependencies": {
+    "@babel/runtime": "7.13.8",
+    "gh-pages": "3.1.0",
+    "normalize.css": "8.0.1",
+    "prettier": "^2.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.0",
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "format": "prettier \"src/**/*.{js,scss}\" --write",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Darshana Gunawardana"
+}
