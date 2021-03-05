@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles.scss"],"names":[],"mappings":"AAEA,KACE,sBAAA,CACA,iBAAA","file":"main.fd691881.chunk.css","sourcesContent":["@import 'normalize.css/normalize.css';\n\n.App {\n  font-family: sans-serif;\n  text-align: center;\n}\n"]}
