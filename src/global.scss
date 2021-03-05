@@ -1,0 +1,66 @@
+@import 'normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html,
+body,
+button {
+  font-family: 'Lato', 'Helvetica Neue', -apple-system, 'BlinkMacSystemFont',
+    'San Francisco', 'Segoe UI', sans-serif;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80rem;
+}
+
+.header {
+  margin: 2rem 0 1rem;
+  padding: 0 2rem;
+  h1 {
+    font-size: 2.6rem;
+  }
+}

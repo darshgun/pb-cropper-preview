@@ -1,0 +1,49 @@
+.preview {
+  display: flex;
+}
+.preview-container {
+  flex: 1;
+  padding: 2rem;
+  span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .container {
+    background-color: #000000;
+  }
+}
+.control-container {
+  padding: 2rem;
+  width: 30rem;
+}
+
+.control {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+select,
+input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  border: 1px solid #94a3b8;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  width: 100%;
+  &:focus {
+    color: black;
+  }
+  // Hack for IE 11+
+  &::-ms-expand {
+    display: none;
+  }
+}
