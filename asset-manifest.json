@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pb-cropper-preview/static/css/main.bb2c79b2.chunk.css",
-    "main.js": "/pb-cropper-preview/static/js/main.67bcd4d3.chunk.js",
-    "main.js.map": "/pb-cropper-preview/static/js/main.67bcd4d3.chunk.js.map",
+    "main.css": "/pb-cropper-preview/static/css/main.0eea5df4.chunk.css",
+    "main.js": "/pb-cropper-preview/static/js/main.8687c33f.chunk.js",
+    "main.js.map": "/pb-cropper-preview/static/js/main.8687c33f.chunk.js.map",
     "runtime-main.js": "/pb-cropper-preview/static/js/runtime-main.1e6e9548.js",
     "runtime-main.js.map": "/pb-cropper-preview/static/js/runtime-main.1e6e9548.js.map",
     "static/css/2.3c526f5d.chunk.css": "/pb-cropper-preview/static/css/2.3c526f5d.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.007a9305.chunk.js.map": "/pb-cropper-preview/static/js/2.007a9305.chunk.js.map",
     "index.html": "/pb-cropper-preview/index.html",
     "static/css/2.3c526f5d.chunk.css.map": "/pb-cropper-preview/static/css/2.3c526f5d.chunk.css.map",
-    "static/css/main.bb2c79b2.chunk.css.map": "/pb-cropper-preview/static/css/main.bb2c79b2.chunk.css.map",
+    "static/css/main.0eea5df4.chunk.css.map": "/pb-cropper-preview/static/css/main.0eea5df4.chunk.css.map",
     "static/js/2.007a9305.chunk.js.LICENSE.txt": "/pb-cropper-preview/static/js/2.007a9305.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1e6e9548.js",
     "static/css/2.3c526f5d.chunk.css",
     "static/js/2.007a9305.chunk.js",
-    "static/css/main.bb2c79b2.chunk.css",
-    "static/js/main.67bcd4d3.chunk.js"
+    "static/css/main.0eea5df4.chunk.css",
+    "static/js/main.8687c33f.chunk.js"
   ]
 }
